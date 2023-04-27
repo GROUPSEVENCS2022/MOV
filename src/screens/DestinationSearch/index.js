@@ -32,7 +32,7 @@ const DestinationSearch = () => {
             fetchDetails
             focus
             query={{
-              key: 'AIzaSyB6Q_5SPmf36loe3ta7Ok0GqHrpSLah3i0',
+              key: 'key',
               language: 'en',
             }}
           /></View>
@@ -48,7 +48,7 @@ const DestinationSearch = () => {
             fetchDetails
             focus
             query={{
-              key: 'AIzaSyB6Q_5SPmf36loe3ta7Ok0GqHrpSLah3i0',
+              key: 'key',
               language: 'en',
             }}
           /></View>
