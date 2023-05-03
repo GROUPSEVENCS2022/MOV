@@ -8,6 +8,7 @@ const DestinationSearch = () => {
 
   const [originPlace, setOriginPlace] = useState('');
   const [destinationPlace, setDestinationPlace] = useState('');
+  const GOOGLE_MAPS_APIKEY = 'key';
 
   useEffect(() => {
     if(originPlace && destinationPlace)
@@ -32,7 +33,7 @@ const DestinationSearch = () => {
             fetchDetails
             focus
             query={{
-              key: 'key',
+              key: GOOGLE_MAPS_APIKEY,
               language: 'en',
             }}
           /></View>
@@ -48,7 +49,7 @@ const DestinationSearch = () => {
             fetchDetails
             focus
             query={{
-              key: 'key',
+              key: GOOGLE_MAPS_APIKEY,
               language: 'en',
             }}
           /></View>

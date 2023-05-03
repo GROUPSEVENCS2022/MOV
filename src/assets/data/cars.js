@@ -2,29 +2,30 @@ export default [
   {
     id: '0',
     type: 'UberX',
-    latitude: 28.450627,
-    longitude: -16.263045,
+    latitude: 0.3354670642213976,
+    longitude: 32.57583878879299,
     heading: 130,
+     
   },
   {
     id: '1',
     type: 'Comfort',
-    latitude: 28.456312,
-    longitude: -16.252929,
+    latitude: 0.3380312117705973, 
+    longitude: 32.58558057195873,
     heading: 0,
   },
   {
     id: '2',
     type: 'UberXL',
-    latitude: 28.456208,
-    longitude: -16.259098,
+    latitude: 0.32488958349104974, 
+    longitude: 32.59791395701974,
     heading: 250,
   },
   {
     id: '3',
     type: 'Comfort',
-    latitude: 28.454812,
-    longitude: -16.258658,
+    latitude: 0.32044688552161293,
+    longitude: 32.576616491807805,
     heading: 30,
   },
 ];
