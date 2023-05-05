@@ -4,12 +4,12 @@ const styles = StyleSheet.create({
     container: {
         padding: 10,
         marginTop: 35,
-        /* backgroundColor: '#eee', */
+        backgroundColor: '#eee',
         height: '100%',
     },
     textInput: {
-        height: 50,
-        backgroundColor: '#eee',
+        height: 200,
+        backgroundColor: '#e0e',
         marginVertical: 5,
         borderRadius: 5,
     },

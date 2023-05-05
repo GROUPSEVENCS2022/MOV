@@ -26,8 +26,8 @@ const RouteMap = () => {
               region={{
                 latitude: lat, /* 37.78825 */
                 longitude: long, /* -122.4324 */
-                latitudeDelta: 0.025,
-                longitudeDelta: 0.022,
+                latitudeDelta: 0.028,
+                longitudeDelta: 0.028,
               }}>
                 <MapViewDirections
                   origin={origin}

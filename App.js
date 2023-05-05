@@ -9,8 +9,8 @@ export default function App() {
     <>
       <StatusBar barStyle="dark-content" />
       {/* <HomeScreen /> */}
-      {/* <DestinationSearch /> */}
-      <SearchResults />
+      <DestinationSearch />
+      {/* <SearchResults /> */}
     </>
   );
 }

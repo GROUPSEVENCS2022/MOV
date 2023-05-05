@@ -29,6 +29,12 @@ const DestinationSearch = () => {
             }}
             style={{
               textInput: styles.textInput,
+              container: {
+                position: 'absolute',
+                top: 0,
+                left: 10,
+                right: 10,
+              }
             }}
             fetchDetails
             focus
@@ -45,6 +51,12 @@ const DestinationSearch = () => {
             }}
             style={{
               textInput: styles.textInput,
+              container: {
+                position: 'absolute',
+                top: 55,
+                left: 10,
+                right: 10,
+              }
             }}
             fetchDetails
             focus
@@ -52,8 +64,7 @@ const DestinationSearch = () => {
               key: GOOGLE_MAPS_APIKEY,
               language: 'en',
             }}
-          /></View>
-          
+          /></View>       
 
       </View>
     </SafeAreaView>
