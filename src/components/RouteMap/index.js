@@ -7,7 +7,7 @@ import MapViewDirections from 'react-native-maps-directions';
 const RouteMap = () => {
   const lat = 0.3354670642213976;
   const long = 32.57583878879299;
-  const GOOGLE_MAPS_APIKEY = 'key';
+  const GOOGLE_MAPS_APIKEY = 'AIzaSyB6Q_5SPmf36loe3ta7Ok0GqHrpSLah3i0';
 
   const origin = {
     latitude: 0.3354670642213976,
