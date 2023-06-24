@@ -54,7 +54,7 @@ const DestinationSearch = () => {
           <GooglePlacesAutocomplete
             placeholder='From?'
             onPress={(data, details = null) => {
-              setOriginPlace({data, details});
+              setOriginPlace({data, details, checkNavigation});
             }}
             enablePoweredByContainer={false}
             suppressDefaultStyles
@@ -80,7 +80,7 @@ const DestinationSearch = () => {
           <GooglePlacesAutocomplete
             placeholder='Where To?'
             onPress={(data, details = null) => {
-              setDestinationPlace({data, details});
+              setDestinationPlace({data, details, checkNavigation});
             }}
             enablePoweredByContainer={false}
             suppressDefaultStyles
