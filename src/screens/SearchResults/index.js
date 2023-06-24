@@ -3,9 +3,14 @@ import { View, Text, TextInput, SafeAreaView, Dimensions } from 'react-native';
 import styles from './styles';
 import RouteMap from '../../components/RouteMap';
 import UberTypes from '../../components/UberTypes';
+import { useRoute } from '@react-navigation/native';
 
 
 const SearchResults = () => {
+
+  const route = useRoute();
+
+  console.warn(route.params);
 
   return (  
     <View style={{display: 'flex', justifyContent: 'space-between', }}>

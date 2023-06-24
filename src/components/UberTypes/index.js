@@ -13,7 +13,7 @@ const UberTypes = () => {
 
   return (  
     <View>  
-        {typesData.map(type => <UberTypeRow type={type} />)}
+        {typesData.map(type => <UberTypeRow type={type} key={type.id} />)}
 
       <Pressable onPress={confirm} style={{
         width: '95%',
@@ -22,7 +22,7 @@ const UberTypes = () => {
         margin: 10,
         alignItems: 'center',
       }}>
-        <Text style={{color: 'white', fontWeight: 'bold'}}>
+        <Text style={{color: 'white', fontWeight: 'bold', borderRadius: 4,}}>
           Confirm Commute
         </Text>
       

@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, PermissionsAndroid, Platform } from 'react-native';
-// import Geolocation from 'react-native-geolocation-service';
+import Geolocation from 'react-native-geolocation-service';
 // import Geolocation from '@react-native-community/geolocation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import HomeScreen from './src/screens/HomeScreen';
@@ -8,21 +8,8 @@ import DestinationSearch from './src/screens/DestinationSearch';
 import SearchResults from './src/screens/SearchResults';
 import { useEffect } from 'react';
 
-import * as Location from 'expo-location';
-
-// Example of getting the current device location
-const getCurrentLocation = async () => {
-  try {
-    const { status } = await Location.requestForegroundPermissionsAsync();
-    if (status === 'granted') {
-      const location = await Location.getCurrentPositionAsync({});
-      console.log(location.coords.latitude, location.coords.longitude);
-    }
-  } catch (error) {
-    console.log('Error:', error);
-  }
-};
-
+import 'react-native-gesture-handler';
+import Router from './src/components/navigation/Root';
 
 export default function App() {
 
@@ -62,9 +49,7 @@ export default function App() {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <HomeScreen />
-      {/* <DestinationSearch /> */}
-      {/* <SearchResults /> */}
+      <Router />
     </>
   );
 }

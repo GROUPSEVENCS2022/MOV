@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, TextInput, SafeAreaView } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import { useNavigation } from '@react-navigation/native';
 import PlaceRow from './PlaceRow';
 import styles from './styles';
 
@@ -28,11 +29,21 @@ const DestinationSearch = () => {
   const [destinationPlace, setDestinationPlace] = useState('');
   const GOOGLE_MAPS_APIKEY = 'AIzaSyB6Q_5SPmf36loe3ta7Ok0GqHrpSLah3i0';
 
-  useEffect(() => {
+  const navigation = useNavigation();
+
+  const checkNavigation = () => {
     if(originPlace && destinationPlace)
     {
-      console.warn(data='Redirect to results');
+      navigation.navigate('SearchResults', {
+        originPlace,
+        destinationPlace,
+      })
+      /* console.warn(data='Redirect to results'); */
     }
+  }
+
+  useEffect(() => {
+    checkNavigation();
 
   },[originPlace, destinationPlace]);
 
