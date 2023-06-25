@@ -27,7 +27,7 @@ const DestinationSearch = () => {
 
   const [originPlace, setOriginPlace] = useState('');
   const [destinationPlace, setDestinationPlace] = useState('');
-  const GOOGLE_MAPS_APIKEY = 'AIzaSyB6Q_5SPmf36loe3ta7Ok0GqHrpSLah3i0';
+  const GOOGLE_MAPS_APIKEY = 'key';
 
   const navigation = useNavigation();
 
