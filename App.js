@@ -8,7 +8,13 @@ import { useEffect } from 'react';
 import 'react-native-gesture-handler';
 import Router from './src/components/navigation/Root';
 
-export default function App() {
+import { Amplify } from 'aws-amplify';
+import config from './src/aws-exports';
+Amplify.configure(config);
+
+import { withAuthenticator } from 'aws-amplify-react-native';
+
+const App = () => {
 
   const androidPermission = async () => {
     try {
@@ -50,6 +56,8 @@ export default function App() {
     </>
   );
 }
+
+export default withAuthenticator(App);
 
 const styles = StyleSheet.create({
   container: {
