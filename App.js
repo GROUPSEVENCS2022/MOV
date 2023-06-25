@@ -3,9 +3,6 @@ import { StyleSheet, Text, View, SafeAreaView, PermissionsAndroid, Platform } fr
 import Geolocation from 'react-native-geolocation-service';
 // import Geolocation from '@react-native-community/geolocation';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import HomeScreen from './src/screens/HomeScreen';
-import DestinationSearch from './src/screens/DestinationSearch';
-import SearchResults from './src/screens/SearchResults';
 import { useEffect } from 'react';
 
 import 'react-native-gesture-handler';

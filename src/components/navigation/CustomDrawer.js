@@ -11,6 +11,7 @@ const CustomDrawer = (props) => {
                 {/*User Row */}
                 <View style={{
                     flexDirection: 'row',
+                    alignItems: 'center',
                 }}>
                     <View style={{
                         backgroundColor: '#cacaca', 

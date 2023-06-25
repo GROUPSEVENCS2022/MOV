@@ -27,7 +27,7 @@ const DestinationSearch = () => {
 
   const [originPlace, setOriginPlace] = useState('');
   const [destinationPlace, setDestinationPlace] = useState('');
-  const GOOGLE_MAPS_APIKEY = 'key';
+  const GOOGLE_MAPS_APIKEY = 'AIzaSyB6Q_5SPmf36loe3ta7Ok0GqHrpSLah3i0';
 
   const navigation = useNavigation();
 
@@ -54,7 +54,7 @@ const DestinationSearch = () => {
           <GooglePlacesAutocomplete
             placeholder='From?'
             onPress={(data, details = null) => {
-              setOriginPlace({data, details, checkNavigation});
+              setOriginPlace({data, details});
             }}
             enablePoweredByContainer={false}
             suppressDefaultStyles
@@ -80,7 +80,7 @@ const DestinationSearch = () => {
           <GooglePlacesAutocomplete
             placeholder='Where To?'
             onPress={(data, details = null) => {
-              setDestinationPlace({data, details, checkNavigation});
+              setDestinationPlace({data, details});
             }}
             enablePoweredByContainer={false}
             suppressDefaultStyles
