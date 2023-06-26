@@ -19,7 +19,7 @@
       "function": {
         "mov49336ec449336ec4PostConfirmation": {
           "deploymentBucketName": "amplify-mov-dev-72922-deployment",
-          "s3Key": "amplify-builds/mov49336ec449336ec4PostConfirmation-7646614d487033373649-build.zip"
+          "s3Key": "amplify-builds/mov49336ec449336ec4PostConfirmation-72736661704d4f777143-build.zip"
         }
       },
       "api": {

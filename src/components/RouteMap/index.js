@@ -18,13 +18,14 @@ const RouteMap = ({ origin, destination }) => {
     longitude: 32.58558057195873,
   } */
 
-  const originLoc = {
-    latitude: origin.details.geometry.location.latitude,
-    longitude: origin.details.geometry.location.longitude,
+  const originLoc = { 
+    // place.geometry.location.lat(),    
+    latitude: origin.details.geometry.location.lat,
+    longitude: origin.details.geometry.location.long,
   };
   const destinationLoc = {
-    latitude: destination.details.geometry.location.latitude,
-    longitude: destination.details.geometry.location.longitude,
+    latitude: destination.details.geometry.location.lat,
+    longitude: destination.details.geometry.location.long,
   };
 
   return (
@@ -36,7 +37,7 @@ const RouteMap = ({ origin, destination }) => {
                 latitude: lat, /* 37.78825 */
                 longitude: long, /* -122.4324 */
                 latitudeDelta: 0.028,
-                longitudeDelta: 0.028,
+                longitudeDelta: 0.031,
               }}>
                 <MapViewDirections
                   origin={originLoc}
