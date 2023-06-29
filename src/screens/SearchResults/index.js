@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { View, Text, TextInput, SafeAreaView, Dimensions } from 'react-native';
 import styles from './styles';
 import RouteMap from '../../components/RouteMap';
-import UberTypes from '../../components/UberTypes';
+import MovTypes from '../../components/MovTypes';
 import { useRoute } from '@react-navigation/native';
 
 
@@ -19,7 +19,7 @@ const SearchResults = () => {
           <RouteMap origin={originPlace} destination={destinationPlace} />
         </View>
         <View style={{height: 400}}>
-          <UberTypes />
+          <MovTypes />
         </View>
         
     </View>

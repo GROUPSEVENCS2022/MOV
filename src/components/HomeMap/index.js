@@ -9,15 +9,15 @@ const HomeMap = () => {
   const long = 32.57583878879299;
 
   const getImage = (type) => {
-    if(type === 'UberXL')
+    if(type === 'Mov-Normal')
     {
-      return require('../../assets/images/top-UberX.png')
+      return require('../../assets/images/mov-Normal.png')
     }
-    if(type === 'Comfort')
+    if(type === 'Mov-Shuttle')
     {
-      return require('../../assets/images/top-Comfort.png')
+      return require('../../assets/images/mov-Shuttle.png')
     }
-    return require('../../assets/images/top-UberXL.png')
+    return require('../../assets/images/mov-XL.png')
   }
 
   return (

@@ -1,19 +1,19 @@
 import React from 'react'
 import { View, Text, TextInput, SafeAreaView, Pressable } from 'react-native';
 import styles from './styles';
-import UberTypeRow from '../UberTypeRow';
-/* import typesData from '../UberTypeRow'; */
+import MovTypeRow from '../MovTypeRow';
+/* import typesData from '../MovTypeRow'; */
 import typesData from '../../assets/data/types';
 
 
-const UberTypes = () => {
+const MovTypes = () => {
   const confirm = () => {
     console.warn('confirm');
   }
 
   return (  
     <View>  
-        {typesData.map(type => <UberTypeRow type={type} key={type.id} />)}
+        {typesData.map(type => <MovTypeRow type={type} key={type.id} />)}
 
       <Pressable onPress={confirm} style={{
         width: '95%',
@@ -33,6 +33,6 @@ const UberTypes = () => {
   )
 }
 
-export default UberTypes;
+export default MovTypes;
 
 

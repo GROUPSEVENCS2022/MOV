@@ -4,20 +4,20 @@ import styles from './styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
-const UberTypeRow = (props) => {
+const MovTypeRow = (props) => {
 
   const {type} = props;
 
   const getImage = () => {
-    if(type.type === 'UberXL')
+    if(type.type === 'Mov-Normal')
     {
-      return require('../../assets/images/UberX.jpeg')
+      return require('../../assets/images/mov-Normal.png')
     }
-    if(type.type === 'Comfort')
+    if(type.type === 'Mov-Shuttle')
     {
-      return require('../../assets/images/Comfort.jpeg')
+      return require('../../assets/images/mov-Shuttle.png')
     }
-    return require('../../assets/images/UberXL.jpeg')
+    return require('../../assets/images/mov-XL.png')
   }
 
 
@@ -51,6 +51,6 @@ const UberTypeRow = (props) => {
   )
 }
 
-export default UberTypeRow;
+export default MovTypeRow;
 
 
