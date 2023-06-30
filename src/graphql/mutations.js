@@ -10,6 +10,19 @@ export const createUser = /* GraphQL */ `
       id
       name
       email
+      orders {
+        items {
+          id
+          createAt
+          userId
+          carId
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -25,6 +38,19 @@ export const updateUser = /* GraphQL */ `
       id
       name
       email
+      orders {
+        items {
+          id
+          createAt
+          userId
+          carId
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -40,6 +66,241 @@ export const deleteUser = /* GraphQL */ `
       id
       name
       email
+      orders {
+        items {
+          id
+          createAt
+          userId
+          carId
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const createCar = /* GraphQL */ `
+  mutation CreateCar(
+    $input: CreateCarInput!
+    $condition: ModelCarConditionInput
+  ) {
+    createCar(input: $input, condition: $condition) {
+      id
+      name
+      type
+      latitude
+      longitude
+      heading
+      orders {
+        items {
+          id
+          createAt
+          userId
+          carId
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updateCar = /* GraphQL */ `
+  mutation UpdateCar(
+    $input: UpdateCarInput!
+    $condition: ModelCarConditionInput
+  ) {
+    updateCar(input: $input, condition: $condition) {
+      id
+      name
+      type
+      latitude
+      longitude
+      heading
+      orders {
+        items {
+          id
+          createAt
+          userId
+          carId
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deleteCar = /* GraphQL */ `
+  mutation DeleteCar(
+    $input: DeleteCarInput!
+    $condition: ModelCarConditionInput
+  ) {
+    deleteCar(input: $input, condition: $condition) {
+      id
+      name
+      type
+      latitude
+      longitude
+      heading
+      orders {
+        items {
+          id
+          createAt
+          userId
+          carId
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const createOrder = /* GraphQL */ `
+  mutation CreateOrder(
+    $input: CreateOrderInput!
+    $condition: ModelOrderConditionInput
+  ) {
+    createOrder(input: $input, condition: $condition) {
+      id
+      createAt
+      userId
+      user {
+        id
+        name
+        email
+        orders {
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      carId
+      car {
+        id
+        name
+        type
+        latitude
+        longitude
+        heading
+        orders {
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updateOrder = /* GraphQL */ `
+  mutation UpdateOrder(
+    $input: UpdateOrderInput!
+    $condition: ModelOrderConditionInput
+  ) {
+    updateOrder(input: $input, condition: $condition) {
+      id
+      createAt
+      userId
+      user {
+        id
+        name
+        email
+        orders {
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      carId
+      car {
+        id
+        name
+        type
+        latitude
+        longitude
+        heading
+        orders {
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deleteOrder = /* GraphQL */ `
+  mutation DeleteOrder(
+    $input: DeleteOrderInput!
+    $condition: ModelOrderConditionInput
+  ) {
+    deleteOrder(input: $input, condition: $condition) {
+      id
+      createAt
+      userId
+      user {
+        id
+        name
+        email
+        orders {
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      carId
+      car {
+        id
+        name
+        type
+        latitude
+        longitude
+        heading
+        orders {
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
       createdAt
       updatedAt
       __typename

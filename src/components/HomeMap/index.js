@@ -1,10 +1,35 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { View, Text, Image, FlatList } from 'react-native';
 import { Marker } from 'react-native-maps';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import cars from '../../assets/data/cars';
+// import cars from '../../assets/data/cars';
+
+import {API, graphqlOperation} from 'aws-amplify';
+// import cars from '../../assets/data/cars';
+import { listCars } from '../../graphql/queries';
 
 const HomeMap = () => {
+
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    const fetchCars = async () => {
+      try {
+        const response = await API.graphql(
+          graphqlOperation(
+            listCars
+          )
+        )
+        setCars(response.data.listCars.items);
+        console.log(response.data.listCars.items);
+      }
+      catch(e) {
+        console.error(e);
+      }
+    };
+    fetchCars();
+  },[])
+
   const lat = 0.3354670642213976;
   const long = 32.57583878879299;
 
