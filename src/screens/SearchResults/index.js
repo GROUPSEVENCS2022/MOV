@@ -8,6 +8,17 @@ import { useRoute } from '@react-navigation/native';
 
 const SearchResults = () => {
 
+  const {typeState} = useState(null);
+
+  const originT = {
+    latitude: 0.3354670642213976,
+  longitude: 32.56427878879299,
+  }
+  const destinationT = {
+    latitude: 0.3380312117705973, 
+    longitude: 32.58558057195873,
+  }
+
   const route = useRoute();
 
   console.log(route.params);
@@ -16,10 +27,10 @@ const SearchResults = () => {
   return (  
     <View style={{display: 'flex', justifyContent: 'space-between', }}>
         <View style={{height: Dimensions.get('window').height - 400}}>
-          <RouteMap origin={originPlace} destination={destinationPlace} />
+          <RouteMap origin={originT} destination={destinationT} />
         </View>
         <View style={{height: 400}}>
-          <MovTypes />
+          <MovTypes/>
         </View>
         
     </View>

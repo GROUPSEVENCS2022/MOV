@@ -59,21 +59,26 @@ const HomeMap = () => {
               }}
               
             >
-              {cars.map((car) => (
+              {cars.map(({id, latitude, longitude, heading, type}) => (
+                  /* const childPropertyValue = item["child property"]; */
                   <Marker
-                  key={car.id}
-                  coordinate={{latitude: car.latitude, longitude: car.longitude}}
+                  key={id}
+                  coordinate={{
+                    latitude: longitude,
+                    longitude: latitude,
+                  }}
                 >
+                  {console.log(`${longitude}`)}
                   <Image 
                   style={{
                     height: 80, 
                     width: 80, 
                     resizeMode: 'contain',
                     transform: [{
-                      rotate: `${car.heading}deg`
+                      rotate: `${heading}deg`
                     }]
                   }}
-                  source={getImage(car.type)}
+                  source={getImage(`${type}`)}
                   />
                 </Marker>)
               )}

@@ -21,7 +21,7 @@ const RootNavigator = () => {
             <Drawer.Navigator drawerContent={(props) => 
                 (<CustomDrawer {...props} />)
             }>
-                <Drawer.Screen name="Hom" component={HomeNavigator} />
+                <Drawer.Screen name="Home" component={HomeNavigator} />
 
                 <Drawer.Screen name="Your Commutes">
                     {() => <DummyScreen name={"Your Commutes"} />}

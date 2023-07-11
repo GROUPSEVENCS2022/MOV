@@ -48,7 +48,7 @@ const DestinationSearch = () => {
   },[originPlace, destinationPlace]);
 
   return (
-    <SafeAreaView>
+    <>
       <View style={styles.container}>
           {/* <View style={styles.innerContainer}> */}
           <GooglePlacesAutocomplete
@@ -72,7 +72,7 @@ const DestinationSearch = () => {
               key: GOOGLE_MAPS_APIKEY,
               language: 'en',
             }}
-            renderRow={(data) => <PlaceRow data={data} />}
+            renderRow={(data) => <PlaceRow data={data} style={{color: 'black'}}/>}
             renderDescription={(data) => data.description || data.vicinity}
             predefinedPlaces={[homePlace, workPlace]}
           />{/* </View> */}
@@ -111,7 +111,7 @@ const DestinationSearch = () => {
           {/* </View>  */}      
 
       </View>
-    </SafeAreaView>
+    </>
   )
 }
 

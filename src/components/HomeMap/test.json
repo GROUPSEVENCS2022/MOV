@@ -1,0 +1,36 @@
+[
+    {
+        "__typename": "Car", 
+        "createdAt": "2023-06-29T14:55:45.155Z", 
+        "heading": 130, 
+        "id": "c6618f31-2abb-4066-8ec7-95ebc701861d", 
+        "latitude": 32.57583878879299, 
+        "longitude": 0.3354670642213976, 
+        "name": "Mov", 
+        "orders": {"__typename": "ModelOrderConnection", "nextToken": null}, 
+        "type": "Mov-Normal", 
+        "updatedAt": "2023-06-29T14:55:45.155Z"
+    }, 
+    
+    {
+        "__typename": "Car", 
+        "createdAt": "2023-06-29T14:58:56.507Z", 
+        "heading": 30, 
+        "id": "34c7041a-305d-4751-97f9-10145a9c9a2e", 
+        "latitude": 32.576616491807805, 
+        "longitude": 0.32044688552161293, 
+        "name": "Mov", 
+        "orders": {"__typename": "ModelOrderConnection", "nextToken": null}, 
+        "type": "Mov-Normal", 
+        "updatedAt": "2023-06-29T14:58:56.507Z"
+    }, 
+        {"__typename": "Car", 
+        "createdAt": "2023-06-29T14:57:45.435Z", 
+        "heading": 0, 
+        "id": "09141cae-ceb2-4e2f-ab86-b7e25dfa734f", 
+        "latitude": 32.58558057195873, 
+        "longitude": 0.3380312117705973, 
+        "name": "Mov", 
+        "orders": {"__typename": "ModelOrderConnection", "nextToken": null}, 
+        "type": "Mov-Shuttle", "updatedAt": "2023-06-29T14:57:45.435Z"
+        }, {"__typename": "Car", "createdAt": "2023-06-29T14:58:20.437Z", "heading": 250, "id": "93f6c743-65ad-4035-bbd3-263a62a2f0c1", "latitude": 32.59791395701974, "longitude": 0.32488958349104974, "name": "Mov", "orders": {"__typename": "ModelOrderConnection", "nextToken": null}, "type": "Mov-XL", "updatedAt": "2023-06-29T14:58:20.437Z"}]

@@ -6,14 +6,17 @@ import MovTypeRow from '../MovTypeRow';
 import typesData from '../../assets/data/types';
 
 
-const MovTypes = () => {
+const MovTypes = ({typeState}) => {
+
+  const [type, setType] = typeState;
   const confirm = () => {
     console.warn('confirm');
   }
 
   return (  
     <View>  
-        {typesData.map(type => <MovTypeRow type={type} key={type.id} />)}
+        {typesData.map(type => 
+        <MovTypeRow type={type} key={type.id} />)}
 
       <Pressable onPress={confirm} style={{
         width: '95%',

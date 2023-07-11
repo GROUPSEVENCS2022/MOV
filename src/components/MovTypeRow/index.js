@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const MovTypeRow = (props) => {
 
-  const {type} = props;
+  const {type, onClick, isSelected} = props;
 
   const getImage = () => {
     if(type.type === 'Mov-Normal')
