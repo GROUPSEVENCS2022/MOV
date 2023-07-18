@@ -11,6 +11,11 @@ export const getUser = /* GraphQL */ `
         items {
           id
           createAt
+          type
+          originLatitude
+          originLongitude
+          destinationLatitude
+          destinationLongitude
           userId
           carId
           createdAt
@@ -71,6 +76,11 @@ export const getCar = /* GraphQL */ `
         items {
           id
           createAt
+          type
+          originLatitude
+          originLongitude
+          destinationLatitude
+          destinationLongitude
           userId
           carId
           createdAt
@@ -126,6 +136,11 @@ export const getOrder = /* GraphQL */ `
     getOrder(id: $id) {
       id
       createAt
+      type
+      originLatitude
+      originLongitude
+      destinationLatitude
+      destinationLongitude
       userId
       user {
         id
@@ -179,6 +194,11 @@ export const listOrders = /* GraphQL */ `
       items {
         id
         createAt
+        type
+        originLatitude
+        originLongitude
+        destinationLatitude
+        destinationLongitude
         userId
         user {
           id
@@ -227,6 +247,11 @@ export const ordersByUserId = /* GraphQL */ `
       items {
         id
         createAt
+        type
+        originLatitude
+        originLongitude
+        destinationLatitude
+        destinationLongitude
         userId
         user {
           id
@@ -275,6 +300,11 @@ export const ordersByCarId = /* GraphQL */ `
       items {
         id
         createAt
+        type
+        originLatitude
+        originLongitude
+        destinationLatitude
+        destinationLongitude
         userId
         user {
           id

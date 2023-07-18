@@ -23,6 +23,14 @@ type Order @model
   id: ID! @primaryKey
   createAt: ID!
 
+  type: String!
+
+  originLatitude: Float!
+  originLongitude: Float!
+
+  destinationLatitude: Float!
+  destinationLongitude: Float!
+
   userId: ID! @index(name: "byUser")
   user: User @belongsTo(fields: ["userId"])
 

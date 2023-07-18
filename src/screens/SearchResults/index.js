@@ -5,12 +5,16 @@ import RouteMap from '../../components/RouteMap';
 import MovTypes from '../../components/MovTypes';
 import { useRoute } from '@react-navigation/native';
 import CarList from '../../components/CarList';
+<<<<<<< HEAD
 import PoolList from '../../components/PoolList';
 
+=======
+>>>>>>> f1c32dd5b383311a4342112634bb385c25c803f1
 
 
 const SearchResults = () => {
 
+<<<<<<< HEAD
   const [modalVisible, setModalVisible] = useState(false);
 
   const onPressHandler = () => {
@@ -28,9 +32,23 @@ const SearchResults = () => {
   };
 
   const route = useRoute();
+=======
+  //const {typeState} = useState(null);
+>>>>>>> f1c32dd5b383311a4342112634bb385c25c803f1
 
-  console.log(route.params);
-  const {originPlace, destinationPlace} = route.params;
+  const originT = {
+    latitude: 0.3354670642213976,
+  longitude: 32.56427878879299,
+  }
+  const destinationT = {
+    latitude: 0.3380312117705973, 
+    longitude: 32.58558057195873,
+  }
+
+  //const route = useRoute();
+
+  //console.log(route.params);
+  //const {originPlace, destinationPlace} = route.params;
 
   const newCommuter = {
     name: "Adrone Mickie",
@@ -56,12 +74,16 @@ const SearchResults = () => {
   return (  
     <View style={{display: 'flex', justifyContent: 'space-between', }}>
         <View style={{height: Dimensions.get('window').height - 400}}>
-          <RouteMap origin={originPlace} destination={destinationPlace} />
+          <RouteMap origin={originT} destination={destinationT} />
         </View>
         <View style={{height: 400}}>
+<<<<<<< HEAD
           <Pressable onPress={onPressHandler}>
             <CarList />
           </Pressable>          
+=======
+          <CarList />
+>>>>>>> f1c32dd5b383311a4342112634bb385c25c803f1
         </View>
 
         <Modal visible={modalVisible} animationType="slide" onRequestClose={closeModal}>

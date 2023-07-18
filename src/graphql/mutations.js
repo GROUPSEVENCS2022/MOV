@@ -14,6 +14,11 @@ export const createUser = /* GraphQL */ `
         items {
           id
           createAt
+          type
+          originLatitude
+          originLongitude
+          destinationLatitude
+          destinationLongitude
           userId
           carId
           createdAt
@@ -42,6 +47,11 @@ export const updateUser = /* GraphQL */ `
         items {
           id
           createAt
+          type
+          originLatitude
+          originLongitude
+          destinationLatitude
+          destinationLongitude
           userId
           carId
           createdAt
@@ -70,6 +80,11 @@ export const deleteUser = /* GraphQL */ `
         items {
           id
           createAt
+          type
+          originLatitude
+          originLongitude
+          destinationLatitude
+          destinationLongitude
           userId
           carId
           createdAt
@@ -101,6 +116,11 @@ export const createCar = /* GraphQL */ `
         items {
           id
           createAt
+          type
+          originLatitude
+          originLongitude
+          destinationLatitude
+          destinationLongitude
           userId
           carId
           createdAt
@@ -132,6 +152,11 @@ export const updateCar = /* GraphQL */ `
         items {
           id
           createAt
+          type
+          originLatitude
+          originLongitude
+          destinationLatitude
+          destinationLongitude
           userId
           carId
           createdAt
@@ -163,6 +188,11 @@ export const deleteCar = /* GraphQL */ `
         items {
           id
           createAt
+          type
+          originLatitude
+          originLongitude
+          destinationLatitude
+          destinationLongitude
           userId
           carId
           createdAt
@@ -186,6 +216,11 @@ export const createOrder = /* GraphQL */ `
     createOrder(input: $input, condition: $condition) {
       id
       createAt
+      type
+      originLatitude
+      originLongitude
+      destinationLatitude
+      destinationLongitude
       userId
       user {
         id
@@ -229,6 +264,11 @@ export const updateOrder = /* GraphQL */ `
     updateOrder(input: $input, condition: $condition) {
       id
       createAt
+      type
+      originLatitude
+      originLongitude
+      destinationLatitude
+      destinationLongitude
       userId
       user {
         id
@@ -272,6 +312,11 @@ export const deleteOrder = /* GraphQL */ `
     deleteOrder(input: $input, condition: $condition) {
       id
       createAt
+      type
+      originLatitude
+      originLongitude
+      destinationLatitude
+      destinationLongitude
       userId
       user {
         id

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { View, Text, Image, FlatList } from 'react-native';
 import { Marker } from 'react-native-maps';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import axios from 'axios';
 // import cars from '../../assets/data/cars';
 
 import {API, graphqlOperation} from 'aws-amplify';
@@ -25,8 +26,18 @@ const HomeMap = () => {
     fetchCars();
   },[])
 
-  const lat = 0.3354670642213976;
-  const long = 32.57583878879299;
+  const fetchData = () => {
+    axios.get(`http://192.168.1.173:3000/cars`)
+      .then(response => {
+        setCarData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching car data:', error);
+      });
+  };
+
+  const lat = 0.334170682213926;
+  const long = 32.57583878879249;
 
   const getImage = (type) => {
     if(type === 'Mov-Normal')
@@ -56,8 +67,11 @@ const HomeMap = () => {
             >
               {cars?.map((car) => (
                   <Marker
-                  key={car.id}
-                  coordinate={{latitude: car.latitude, longitude: car.longitude}}
+                  key={id}
+                  coordinate={{
+                    latitude: latitude,
+                    longitude: longitude,
+                  }}
                 >
                   {console.log(car?.latitude)}
                   <Image 
@@ -66,10 +80,10 @@ const HomeMap = () => {
                     width: 80, 
                     resizeMode: 'contain',
                     transform: [{
-                      rotate: `${car.heading}deg`
+                      rotate: `${heading}deg`
                     }]
                   }}
-                  source={getImage(car.type)}
+                  source={getImage(type)}
                   />
                 </Marker>)
               )}
