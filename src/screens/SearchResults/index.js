@@ -4,11 +4,12 @@ import styles from './styles';
 import RouteMap from '../../components/RouteMap';
 import MovTypes from '../../components/MovTypes';
 import { useRoute } from '@react-navigation/native';
+import CarList from '../../components/CarList';
 
 
 const SearchResults = () => {
 
-  const {typeState} = useState(null);
+  //const {typeState} = useState(null);
 
   const originT = {
     latitude: 0.3354670642213976,
@@ -19,10 +20,10 @@ const SearchResults = () => {
     longitude: 32.58558057195873,
   }
 
-  const route = useRoute();
+  //const route = useRoute();
 
-  console.log(route.params);
-  const {originPlace, destinationPlace} = route.params;
+  //console.log(route.params);
+  //const {originPlace, destinationPlace} = route.params;
 
   return (  
     <View style={{display: 'flex', justifyContent: 'space-between', }}>
@@ -30,7 +31,7 @@ const SearchResults = () => {
           <RouteMap origin={originT} destination={destinationT} />
         </View>
         <View style={{height: 400}}>
-          <MovTypes/>
+          <CarList />
         </View>
         
     </View>

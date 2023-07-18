@@ -6,7 +6,7 @@ import Entypo from 'react-native-vector-icons/Entypo'
 import styles from './styles'
 import { useNavigation } from '@react-navigation/native'
 
-const HomeSearch = props => {
+const HomeSearch = (props) => {
     const navigation = useNavigation();
     const goToSearch = () => {
         navigation.navigate('DestinationSearch')

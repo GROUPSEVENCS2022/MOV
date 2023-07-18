@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { View, Text, Image, FlatList } from 'react-native';
 import { Marker } from 'react-native-maps';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import axios from 'axios';
 // import cars from '../../assets/data/cars';
 
 import {API, graphqlOperation} from 'aws-amplify';
@@ -10,28 +11,24 @@ import { listCars } from '../../graphql/queries';
 
 const HomeMap = () => {
 
-  const [cars, setCars] = useState([]);
-
+  // const [cars, setCars] = useState([]);
+  const [carData, setCarData] = useState([]);
   useEffect(() => {
-    const fetchCars = async () => {
-      try {
-        const response = await API.graphql(
-          graphqlOperation(
-            listCars
-          )
-        )
-        setCars(response.data.listCars.items);
-        console.log(response.data.listCars.items);
-      }
-      catch(e) {
-        console.error(e);
-      }
-    };
-    fetchCars();
-  },[])
+    fetchData();
+  }, []);
 
-  const lat = 0.3354670642213976;
-  const long = 32.57583878879299;
+  const fetchData = () => {
+    axios.get(`http://192.168.1.173:3000/cars`)
+      .then(response => {
+        setCarData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching car data:', error);
+      });
+  };
+
+  const lat = 0.334170682213926;
+  const long = 32.57583878879249;
 
   const getImage = (type) => {
     if(type === 'Mov-Normal')
@@ -59,16 +56,16 @@ const HomeMap = () => {
               }}
               
             >
-              {cars.map(({id, latitude, longitude, heading, type}) => (
+              {carData?.map(({id, latitude, brand, longitude, heading, type}) => (
                   /* const childPropertyValue = item["child property"]; */
                   <Marker
                   key={id}
                   coordinate={{
-                    latitude: longitude,
-                    longitude: latitude,
+                    latitude: latitude,
+                    longitude: longitude,
                   }}
                 >
-                  {console.log(`${longitude}`)}
+                  {console.log(`${latitude}`)}
                   <Image 
                   style={{
                     height: 80, 
@@ -78,7 +75,7 @@ const HomeMap = () => {
                       rotate: `${heading}deg`
                     }]
                   }}
-                  source={getImage(`${type}`)}
+                  source={getImage(type)}
                   />
                 </Marker>)
               )}

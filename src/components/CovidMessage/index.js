@@ -8,7 +8,7 @@ const CovidMessage = () => {
   const [commuters, setCommuters] = useState([]);
 
   useEffect(() => {
-    axios.get('http://192.168.1.173:3000/commuters')
+    axios.get('http://192.168.1.173:3000/pools')
       .then(response => {
         setCommuters(response.data);
       })
