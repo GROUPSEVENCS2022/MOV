@@ -10,22 +10,17 @@ import { listCars } from '../../graphql/queries';
 
 const HomeMap = () => {
 
-  const [cars, setCars] = useState([]);
+  const [cars, setCars] = useState();
 
   useEffect(() => {
-    const fetchCars = async () => {
-      try {
-        const response = await API.graphql(
-          graphqlOperation(
-            listCars
-          )
-        )
-        setCars(response.data.listCars.items);
-        console.log(response.data.listCars.items);
-      }
-      catch(e) {
-        console.error(e);
-      }
+    const fetchCars = () => {
+      fetch(`http://192.168.1.173:3000/cars`)
+        .then(response => {
+          setCars(response.data);
+        })
+        .catch(error => {
+          console.error('Error fetching car data:', error);
+        });
     };
     fetchCars();
   },[])
@@ -59,11 +54,12 @@ const HomeMap = () => {
               }}
               
             >
-              {cars.map((car) => (
+              {cars?.map((car) => (
                   <Marker
                   key={car.id}
                   coordinate={{latitude: car.latitude, longitude: car.longitude}}
                 >
+                  {console.log(car?.latitude)}
                   <Image 
                   style={{
                     height: 80, 
