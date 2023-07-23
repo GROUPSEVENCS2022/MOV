@@ -5,16 +5,12 @@ import RouteMap from '../../components/RouteMap';
 import MovTypes from '../../components/MovTypes';
 import { useRoute } from '@react-navigation/native';
 import CarList from '../../components/CarList';
-<<<<<<< HEAD
 import PoolList from '../../components/PoolList';
 
-=======
->>>>>>> f1c32dd5b383311a4342112634bb385c25c803f1
 
 
 const SearchResults = () => {
 
-<<<<<<< HEAD
   const [modalVisible, setModalVisible] = useState(false);
 
   const onPressHandler = () => {
@@ -32,9 +28,6 @@ const SearchResults = () => {
   };
 
   const route = useRoute();
-=======
-  //const {typeState} = useState(null);
->>>>>>> f1c32dd5b383311a4342112634bb385c25c803f1
 
   const originT = {
     latitude: 0.3354670642213976,
@@ -77,21 +70,16 @@ const SearchResults = () => {
           <RouteMap origin={originT} destination={destinationT} />
         </View>
         <View style={{height: 400}}>
-<<<<<<< HEAD
           <Pressable onPress={onPressHandler}>
             <CarList />
           </Pressable>          
-=======
-          <CarList />
->>>>>>> f1c32dd5b383311a4342112634bb385c25c803f1
         </View>
-
         <Modal visible={modalVisible} animationType="slide" onRequestClose={closeModal}>
         <View style={styles.modalContainer}>
           <Text style={styles.modalText}>Virtual Stage details</Text>
             <PoolList />
           <Pressable onPress={handleJoin} style={styles.joinButton}>
-            <Text style={styles.joinButtonText}>Join</Text>
+            <Text style={styles.joinButtonText}>Join Pool</Text>
           </Pressable>
         </View>
       </Modal>
